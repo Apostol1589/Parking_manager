@@ -1,0 +1,15 @@
+C:\Users\ruslan\Source\repos\Parking_manager\ParkingManager\ParkingManager.DataAccess\bin\Debug\net8.0\ParkingManager.DataAccess.deps.json
+C:\Users\ruslan\Source\repos\Parking_manager\ParkingManager\ParkingManager.DataAccess\bin\Debug\net8.0\ParkingManager.DataAccess.runtimeconfig.json
+C:\Users\ruslan\Source\repos\Parking_manager\ParkingManager\ParkingManager.DataAccess\bin\Debug\net8.0\ParkingManager.DataAccess.dll
+C:\Users\ruslan\Source\repos\Parking_manager\ParkingManager\ParkingManager.DataAccess\bin\Debug\net8.0\ParkingManager.DataAccess.pdb
+C:\Users\ruslan\Source\repos\Parking_manager\ParkingManager\ParkingManager.DataAccess\obj\Debug\net8.0\ParkingManager.DataAccess.csproj.AssemblyReference.cache
+C:\Users\ruslan\Source\repos\Parking_manager\ParkingManager\ParkingManager.DataAccess\obj\Debug\net8.0\ParkingManager.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ruslan\Source\repos\Parking_manager\ParkingManager\ParkingManager.DataAccess\obj\Debug\net8.0\ParkingManager.DataAccess.AssemblyInfoInputs.cache
+C:\Users\ruslan\Source\repos\Parking_manager\ParkingManager\ParkingManager.DataAccess\obj\Debug\net8.0\ParkingManager.DataAccess.AssemblyInfo.cs
+C:\Users\ruslan\Source\repos\Parking_manager\ParkingManager\ParkingManager.DataAccess\obj\Debug\net8.0\ParkingManager.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\ruslan\Source\repos\Parking_manager\ParkingManager\ParkingManager.DataAccess\obj\Debug\net8.0\ParkingManager.DataAccess.sourcelink.json
+C:\Users\ruslan\Source\repos\Parking_manager\ParkingManager\ParkingManager.DataAccess\obj\Debug\net8.0\ParkingManager.DataAccess.dll
+C:\Users\ruslan\Source\repos\Parking_manager\ParkingManager\ParkingManager.DataAccess\obj\Debug\net8.0\refint\ParkingManager.DataAccess.dll
+C:\Users\ruslan\Source\repos\Parking_manager\ParkingManager\ParkingManager.DataAccess\obj\Debug\net8.0\ParkingManager.DataAccess.pdb
+C:\Users\ruslan\Source\repos\Parking_manager\ParkingManager\ParkingManager.DataAccess\obj\Debug\net8.0\ParkingManager.DataAccess.genruntimeconfig.cache
+C:\Users\ruslan\Source\repos\Parking_manager\ParkingManager\ParkingManager.DataAccess\obj\Debug\net8.0\ref\ParkingManager.DataAccess.dll
