@@ -16,3 +16,5 @@ C:\Users\ruslan\Source\repos\Parking_manager\ParkingManager\ParkingManager.Busin
 C:\Users\ruslan\Source\repos\Parking_manager\ParkingManager\ParkingManager.BusinessLogic\bin\Debug\net8.0\ParkingManager.DataAccess.dll
 C:\Users\ruslan\Source\repos\Parking_manager\ParkingManager\ParkingManager.BusinessLogic\bin\Debug\net8.0\ParkingManager.DataAccess.pdb
 C:\Users\ruslan\Source\repos\Parking_manager\ParkingManager\ParkingManager.BusinessLogic\obj\Debug\net8.0\ParkingM.C62B4598.Up2Date
+C:\Users\ruslan\Source\Repos\Parking_manager\ParkingManager\ParkingManager.BusinessLogic\bin\Debug\net8.0\TaxCalculationSdk.dll
+C:\Users\ruslan\Source\Repos\Parking_manager\ParkingManager\ParkingManager.BusinessLogic\bin\Debug\net8.0\TaxCalculationSdk.pdb

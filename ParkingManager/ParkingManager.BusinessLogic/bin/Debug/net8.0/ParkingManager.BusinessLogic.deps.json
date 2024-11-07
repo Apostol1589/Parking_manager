@@ -11,7 +11,8 @@
           "Microsoft.EntityFrameworkCore": "8.0.10",
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.10",
           "Microsoft.EntityFrameworkCore.Tools": "8.0.10",
-          "ParkingManager.DataAccess": "1.0.0"
+          "ParkingManager.DataAccess": "1.0.0",
+          "TaxCalculationSdk": "1.0.0"
         },
         "runtime": {
           "ParkingManager.BusinessLogic.dll": {}
@@ -925,6 +926,11 @@
         "runtime": {
           "ParkingManager.DataAccess.dll": {}
         }
+      },
+      "TaxCalculationSdk/1.0.0": {
+        "runtime": {
+          "TaxCalculationSdk.dll": {}
+        }
       }
     }
   },
@@ -1467,6 +1473,11 @@
       "hashPath": "system.windows.extensions.6.0.0.nupkg.sha512"
     },
     "ParkingManager.DataAccess/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "TaxCalculationSdk/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -1509,6 +1509,16 @@
         "runtime": {
           "bin/placeholder/ParkingManager.DataAccess.dll": {}
         }
+      },
+      "TaxCalculationSdk/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/TaxCalculationSdk.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TaxCalculationSdk.dll": {}
+        }
       }
     }
   },
@@ -4049,6 +4059,11 @@
       "type": "project",
       "path": "../ParkingManager.DataAccess/ParkingManager.DataAccess.csproj",
       "msbuildProject": "../ParkingManager.DataAccess/ParkingManager.DataAccess.csproj"
+    },
+    "TaxCalculationSdk/1.0.0": {
+      "type": "project",
+      "path": "../TaxCalculationSdk/TaxCalculationSdk.csproj",
+      "msbuildProject": "../TaxCalculationSdk/TaxCalculationSdk.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -4056,7 +4071,8 @@
       "Microsoft.EntityFrameworkCore >= 8.0.10",
       "Microsoft.EntityFrameworkCore.SqlServer >= 8.0.10",
       "Microsoft.EntityFrameworkCore.Tools >= 8.0.10",
-      "ParkingManager.DataAccess >= 1.0.0"
+      "ParkingManager.DataAccess >= 1.0.0",
+      "TaxCalculationSdk >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -4065,11 +4081,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ruslan\\Source\\repos\\Parking_manager\\ParkingManager\\ParkingManager.BusinessLogic\\ParkingManager.BusinessLogic.csproj",
+      "projectUniqueName": "C:\\Users\\ruslan\\Source\\Repos\\Parking_manager\\ParkingManager\\ParkingManager.BusinessLogic\\ParkingManager.BusinessLogic.csproj",
       "projectName": "ParkingManager.BusinessLogic",
-      "projectPath": "C:\\Users\\ruslan\\Source\\repos\\Parking_manager\\ParkingManager\\ParkingManager.BusinessLogic\\ParkingManager.BusinessLogic.csproj",
+      "projectPath": "C:\\Users\\ruslan\\Source\\Repos\\Parking_manager\\ParkingManager\\ParkingManager.BusinessLogic\\ParkingManager.BusinessLogic.csproj",
       "packagesPath": "C:\\Users\\ruslan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ruslan\\Source\\repos\\Parking_manager\\ParkingManager\\ParkingManager.BusinessLogic\\obj\\",
+      "outputPath": "C:\\Users\\ruslan\\Source\\Repos\\Parking_manager\\ParkingManager\\ParkingManager.BusinessLogic\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ruslan\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -4087,8 +4103,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\ruslan\\Source\\repos\\Parking_manager\\ParkingManager\\ParkingManager.DataAccess\\ParkingManager.DataAccess.csproj": {
-              "projectPath": "C:\\Users\\ruslan\\Source\\repos\\Parking_manager\\ParkingManager\\ParkingManager.DataAccess\\ParkingManager.DataAccess.csproj"
+            "C:\\Users\\ruslan\\Source\\Repos\\Parking_manager\\ParkingManager\\ParkingManager.DataAccess\\ParkingManager.DataAccess.csproj": {
+              "projectPath": "C:\\Users\\ruslan\\Source\\Repos\\Parking_manager\\ParkingManager\\ParkingManager.DataAccess\\ParkingManager.DataAccess.csproj"
+            },
+            "C:\\Users\\ruslan\\Source\\Repos\\Parking_manager\\ParkingManager\\TaxCalculationSdk\\TaxCalculationSdk.csproj": {
+              "projectPath": "C:\\Users\\ruslan\\Source\\Repos\\Parking_manager\\ParkingManager\\TaxCalculationSdk\\TaxCalculationSdk.csproj"
             }
           }
         }
