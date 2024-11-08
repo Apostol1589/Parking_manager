@@ -92,7 +92,7 @@
         "projectName": "ParkingManager.DataAccess",
         "projectPath": "C:\\Users\\ruslan\\Source\\repos\\Parking_manager\\ParkingManager\\ParkingManager.DataAccess\\ParkingManager.DataAccess.csproj",
         "packagesPath": "C:\\Users\\ruslan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ruslan\\Source\\repos\\Parking_manager\\ParkingManager\\ParkingManager.DataAccess\\obj\\",
+        "outputPath": "C:\\Users\\ruslan\\Source\\Repos\\Parking_manager\\ParkingManager\\ParkingManager.DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ruslan\\AppData\\Roaming\\NuGet\\NuGet.Config",
