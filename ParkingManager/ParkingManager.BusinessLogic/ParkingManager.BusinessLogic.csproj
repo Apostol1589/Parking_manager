@@ -17,6 +17,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ParkingManager.DataAccess\ParkingManager.DataAccess.csproj" />
+    <ProjectReference Include="..\TaxCalculationSdk\TaxCalculationSdk.csproj" />
   </ItemGroup>
 
 </Project>
