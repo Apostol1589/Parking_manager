@@ -145,3 +145,6 @@ C:\Users\ruslan\Source\repos\Parking_manager\ParkingManager\ParkingManagerAPI\bi
 C:\Users\ruslan\Source\repos\Parking_manager\ParkingManager\ParkingManagerAPI\bin\Debug\net8.0\ParkingManager.DataAccess.dll
 C:\Users\ruslan\Source\repos\Parking_manager\ParkingManager\ParkingManagerAPI\bin\Debug\net8.0\ParkingManager.BusinessLogic.pdb
 C:\Users\ruslan\Source\repos\Parking_manager\ParkingManager\ParkingManagerAPI\bin\Debug\net8.0\ParkingManager.DataAccess.pdb
+C:\Users\ruslan\Source\Repos\Parking_manager\ParkingManager\ParkingManagerAPI\bin\Debug\net8.0\TaxCalculationSdk.dll
+C:\Users\ruslan\Source\Repos\Parking_manager\ParkingManager\ParkingManagerAPI\bin\Debug\net8.0\TaxCalculationSdk.pdb
+C:\Users\ruslan\Source\Repos\Parking_manager\ParkingManager\ParkingManagerAPI\bin\Debug\net8.0\Scrutor.dll

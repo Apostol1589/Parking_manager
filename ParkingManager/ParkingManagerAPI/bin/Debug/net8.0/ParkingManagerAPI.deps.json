@@ -13,6 +13,7 @@
           "Microsoft.EntityFrameworkCore.Tools": "8.0.10",
           "ParkingManager.BusinessLogic": "1.0.0",
           "ParkingManager.DataAccess": "1.0.0",
+          "Scrutor": "5.0.1",
           "Swashbuckle.AspNetCore": "6.4.0"
         },
         "runtime": {
@@ -648,6 +649,18 @@
           }
         }
       },
+      "Scrutor/5.0.1": {
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.2",
+          "Microsoft.Extensions.DependencyModel": "8.0.2"
+        },
+        "runtime": {
+          "lib/net8.0/Scrutor.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.0.0.0"
+          }
+        }
+      },
       "Swashbuckle.AspNetCore/6.4.0": {
         "dependencies": {
           "Microsoft.Extensions.ApiDescription.Server": "6.0.5",
@@ -944,7 +957,8 @@
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "8.0.10",
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.10",
-          "ParkingManager.DataAccess": "1.0.0"
+          "ParkingManager.DataAccess": "1.0.0",
+          "TaxCalculationSdk": "1.0.0"
         },
         "runtime": {
           "ParkingManager.BusinessLogic.dll": {}
@@ -957,6 +971,11 @@
         },
         "runtime": {
           "ParkingManager.DataAccess.dll": {}
+        }
+      },
+      "TaxCalculationSdk/1.0.0": {
+        "runtime": {
+          "TaxCalculationSdk.dll": {}
         }
       }
     }
@@ -1275,6 +1294,13 @@
       "path": "mono.texttemplating/2.2.1",
       "hashPath": "mono.texttemplating.2.2.1.nupkg.sha512"
     },
+    "Scrutor/5.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-lODLSduex32544jZZom2bN73mg4DfyGCNdywismPv2D2Hslv4jaq1Y+apV24xTW65tDMXskZHwVFSg2xIs3jtQ==",
+      "path": "scrutor/5.0.1",
+      "hashPath": "scrutor.5.0.1.nupkg.sha512"
+    },
     "Swashbuckle.AspNetCore/6.4.0": {
       "type": "package",
       "serviceable": true,
@@ -1547,6 +1573,11 @@
       "sha512": ""
     },
     "ParkingManager.DataAccess/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "TaxCalculationSdk/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -1,11 +1,14 @@
 using Microsoft.EntityFrameworkCore;
+using ParkingManager.BusinessLogic.Adapters;
 using ParkingManager.BusinessLogic.Contracts;
+using ParkingManager.BusinessLogic.Decorator;
 using ParkingManager.BusinessLogic.Services;
 using ParkingManager.DataAccess.Data;
 using ParkingManager.DataAccess.Repositories.ParkingLotRepo;
 using ParkingManager.DataAccess.Repositories.ParkingSpaceRepo;
 using ParkingManager.DataAccess.Repositories.ParkingTicketRepo;
 using ParkingManager.DataAccess.Repositories.VehicleRepo;
+using TaxCalculationSdk;
 
 
 namespace ParkingManagerAPI
@@ -27,6 +30,13 @@ namespace ParkingManagerAPI
             builder.Services.AddScoped<IParkingSpaceService, ParkingSpaceService>();
             builder.Services.AddScoped<IParkingTicketRepository, ParkingTicketRepository>();
             builder.Services.AddScoped<IParkingTicketService, ParkingTicketService>();
+            builder.Services.AddScoped<ITaxCalculationAdapter, TaxCalculationAdapter>();
+            builder.Services.AddScoped<ITaxCalculationSdk, TaxCalculationSdk.TaxCalculationSdk>();
+            
+
+            //Decorators
+            builder.Services.Decorate<IParkingTicketService, ParkingTicketLoggingDecorator>();
+            //builder.Services.AddScoped<IParkingTicketService, ParkingTicketLoggingDecorator>();
 
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
