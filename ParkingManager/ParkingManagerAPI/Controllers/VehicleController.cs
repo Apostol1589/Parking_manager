@@ -1,7 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using ParkingManager.BusinessLogic.Builder;
 using ParkingManager.BusinessLogic.Contracts;
 using ParkingManager.BusinessLogic.Enumerator;
 using ParkingManager.DataAccess.Entities;
+using System.ComponentModel.DataAnnotations;
 
 namespace ParkingManagerAPI.Controllers
 {
@@ -44,52 +46,49 @@ namespace ParkingManagerAPI.Controllers
         [HttpPost]
         public async Task<IActionResult> Create(string licencePlate, string mark, string model, string color)
         {
-            if (string.IsNullOrWhiteSpace(licencePlate) || string.IsNullOrWhiteSpace(mark) || string.IsNullOrWhiteSpace(model))
-            {
-                return BadRequest("Licence plate, mark, and model are required.");
-            }
-
-            var vehicle = new Vehicle
-            {
-                LicencePlate = licencePlate,
-                Mark = mark,
-                Model = model,
-                Color = color
-            };
-
             try
             {
+                var vehicle = new VehicleBuilder()
+                    .SetLicencePlate(licencePlate)
+                    .SetMark(mark)
+                    .SetModel(model)
+                    .SetColor(color)
+                    .Build();
+
                 await _vehicleService.Create(vehicle);
                 return CreatedAtAction(nameof(GetVehicleById), new { id = vehicle.Id }, vehicle);
             }
-            catch (ArgumentException ex)
+            catch (ValidationException ex)
             {
                 return BadRequest(ex.Message);
             }
         }
 
-
         [HttpPut("{id:int}")]
         public async Task<IActionResult> Update(int id, string licencePlate, string mark, string model, string color)
         {
-            Vehicle existingVehicle = await _vehicleService.GetVehicleById(id);
-
-            if (existingVehicle == null)
-            {
-                return NotFound("Vehicle not found.");
-            }
-
             try
             {
-                existingVehicle.LicencePlate = licencePlate;
-                existingVehicle.Mark = mark;
-                existingVehicle.Model = model;
-                existingVehicle.Color = color;
+                Vehicle existingVehicle = await _vehicleService.GetVehicleById(id);
 
-                await _vehicleService.Update(existingVehicle);
+                if (existingVehicle == null)
+                {
+                    return NotFound("Vehicle not found.");
+                }
+
+                var updatedVehicle = new VehicleBuilder()
+                    .SetLicencePlate(licencePlate)
+                    .SetMark(mark)
+                    .SetModel(model)
+                    .SetColor(color)
+                    .Build();
+
+                updatedVehicle.Id = existingVehicle.Id;
+
+                await _vehicleService.Update(updatedVehicle);
                 return NoContent();
             }
-            catch (ArgumentException ex)
+            catch (ValidationException ex)
             {
                 return BadRequest(ex.Message);
             }

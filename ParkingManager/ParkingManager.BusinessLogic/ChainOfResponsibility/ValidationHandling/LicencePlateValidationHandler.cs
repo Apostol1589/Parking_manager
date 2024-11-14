@@ -11,8 +11,7 @@ namespace ParkingManager.BusinessLogic.ChainOfResponsibility.ValidationHandling
 
         public override void Handle(Vehicle vehicle)
         {
-            if (string.IsNullOrWhiteSpace(vehicle.LicencePlate) ||
-                !System.Text.RegularExpressions.Regex.IsMatch(vehicle.LicencePlate, @"^[A-Z0-9]{6,8}$"))
+            if (string.IsNullOrWhiteSpace(vehicle.LicencePlate) || vehicle.LicencePlate.Trim().Length == 0)
             {
                 throw new ArgumentException("License plate must be 6-8 alphanumeric characters with no spaces.");
             }
