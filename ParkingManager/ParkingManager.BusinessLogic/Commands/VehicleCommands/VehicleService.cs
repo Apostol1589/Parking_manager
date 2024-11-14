@@ -1,20 +1,17 @@
 ﻿using Microsoft.Extensions.Logging;
 using ParkingManager.BusinessLogic.ChainOfResponsibility.ValidationHandling;
 using ParkingManager.BusinessLogic.Contracts;
-using ParkingManager.BusinessLogic.Enumerator;
 using ParkingManager.DataAccess.Entities;
 using ParkingManager.DataAccess.Repositories.VehicleRepo;
 
-
-namespace ParkingManager.BusinessLogic.Services
+namespace ParkingManager.BusinessLogic.Commands.VehicleCommands
 {
     public class VehicleService : IVehicleService
     {
         private readonly IVehicleRepository _vehicleRepository;
         private readonly ILoggerFactory _loggerFactory;
 
-        public VehicleService(IVehicleRepository vehicleRepository,
-            ILoggerFactory loggerFactory)
+        public VehicleService(IVehicleRepository vehicleRepository, ILoggerFactory loggerFactory)
         {
             _vehicleRepository = vehicleRepository;
             _loggerFactory = loggerFactory;
@@ -52,16 +49,24 @@ namespace ParkingManager.BusinessLogic.Services
             return vehicle;
         }
 
-        public async Task Update(Vehicle vehicle)
-        {
-            ValidateVehicle(vehicle);
-            await _vehicleRepository.Create(vehicle);
-        }
-
         public async Task Create(Vehicle vehicle)
         {
             ValidateVehicle(vehicle);
-            await _vehicleRepository.Update(vehicle);
+
+            var command = new CreateVehicleCommand(_vehicleRepository, vehicle);
+            var invoker = new CommandInvoker();
+            invoker.AddCommand(command);
+            await invoker.ExecuteCommandsAsync();
+        }
+
+        public async Task Update(Vehicle vehicle)
+        {
+            ValidateVehicle(vehicle);
+
+            var command = new UpdateVehicleCommand(_vehicleRepository, vehicle);
+            var invoker = new CommandInvoker();
+            invoker.AddCommand(command);
+            await invoker.ExecuteCommandsAsync();
         }
 
         public async Task Remove(int id)
@@ -77,26 +82,11 @@ namespace ParkingManager.BusinessLogic.Services
                 throw new KeyNotFoundException($"No vehicle found with ID {id}.");
             }
 
-            await _vehicleRepository.Delete(id);
-        }
-
-        public async Task Iterator()
-        {
-            VehicleCollection vehicles = new VehicleCollection();
-
-            var allVehicles = await GetAllVehicles();
-
-            foreach (var vehicle in allVehicles)
-            {
-                vehicles.AddVehicle(vehicle);
-            }
-
-            foreach (var vehicle in vehicles)
-            {
-                Console.WriteLine($"Mark: {vehicle.Mark}, Model: {vehicle.Model}");
-            }
+            var command = new RemoveVehicleCommand(_vehicleRepository, id);
+            var invoker = new CommandInvoker();
+            invoker.AddCommand(command);
+            await invoker.ExecuteCommandsAsync();
         }
 
     }
-
 }

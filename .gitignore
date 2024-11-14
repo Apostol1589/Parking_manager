@@ -396,4 +396,14 @@ FodyWeavers.xsd
 *.msm
 *.msp
 
+<<<<<<< HEAD
+=======
 # JetBrains Ride
+>>>>>>> main
+
+*.suo
+*.user
+_ReSharper.*
+bin
+obj
+packages

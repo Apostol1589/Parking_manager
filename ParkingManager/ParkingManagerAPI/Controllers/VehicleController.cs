@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using ParkingManager.BusinessLogic.Contracts;
+using ParkingManager.BusinessLogic.Enumerator;
 using ParkingManager.DataAccess.Entities;
 
 namespace ParkingManagerAPI.Controllers
@@ -116,5 +117,28 @@ namespace ParkingManagerAPI.Controllers
                 return BadRequest(ex.Message);
             }
         }
+
+        [HttpGet("iterator")]
+        public async Task<IActionResult> Iterator()
+        {
+            VehicleCollection vehicles = new VehicleCollection();
+
+            var allVehicles = await _vehicleService.GetAllVehicles();
+
+            foreach (var vehicle in allVehicles)
+            {
+                vehicles.AddVehicle(vehicle);
+            }
+
+            var vehicleInfo = new List<string>();
+
+            foreach (var vehicle in vehicles)
+            {
+                vehicleInfo.Add($"Mark: {vehicle.Mark}, Model: {vehicle.Model}");
+            }
+
+            return Ok(vehicleInfo);
+        }
+
     }
 }
