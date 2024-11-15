@@ -15,8 +15,4 @@
     </PackageReference>
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\ParkingManager.DataAccess\ParkingManager.DataAccess.csproj" />
-  </ItemGroup>
-
 </Project>

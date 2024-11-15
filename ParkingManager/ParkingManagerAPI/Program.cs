@@ -1,11 +1,19 @@
 using Microsoft.EntityFrameworkCore;
-using ParkingManager.BusinessLogic.Contracts;
-using ParkingManager.BusinessLogic.Services;
-using ParkingManager.DataAccess.Data;
-using ParkingManager.DataAccess.Repositories.ParkingLotRepo;
-using ParkingManager.DataAccess.Repositories.ParkingSpaceRepo;
-using ParkingManager.DataAccess.Repositories.ParkingTicketRepo;
-using ParkingManager.DataAccess.Repositories.VehicleRepo;
+using ParkingManager.Domain.Contracts;
+using ParkingManager.Application.Services;
+using ParkingManager.Infrastructure.Data;
+using ParkingManager.Infrastructure.Repositories.ParkingLotRepo;
+using ParkingManager.Infrastructure.Repositories.ParkingSpaceRepo;
+using ParkingManager.Infrastructure.Repositories.ParkingTicketRepo;
+using ParkingManager.Infrastructure.Repositories.VehicleRepo;
+using ParkingManager.Application.Mediator;
+using ParkingManager.Application.CQRS.Core;
+using ParkingManager.Application.CQRS.VehicleCQRS.Commands.Create;
+using ParkingManager.Application.CQRS.VehicleCQRS.Commands.Delete;
+using ParkingManager.Application.CQRS.VehicleCQRS.Commands.Update;
+using ParkingManager.Application.CQRS.VehicleCQRS.Queries.Get;
+using ParkingManager.Application.CQRS.VehicleCQRS.Queries.GetAll;
+using ParkingManager.Domain.Entities;
 
 
 namespace ParkingManagerAPI
@@ -27,6 +35,19 @@ namespace ParkingManagerAPI
             builder.Services.AddScoped<IParkingSpaceService, ParkingSpaceService>();
             builder.Services.AddScoped<IParkingTicketRepository, ParkingTicketRepository>();
             builder.Services.AddScoped<IParkingTicketService, ParkingTicketService>();
+
+            builder.Services.AddSingleton<IMediator, Mediator>();
+
+            builder.Services.AddTransient<ICommandHandler<CreateVehicleCommand, int>, CreateVehicleCommandHandler>();
+            builder.Services.AddTransient<ICommandHandler<DeleteVehicleCommand>, DeleteVehicleCommandHandler>();
+            builder.Services.AddTransient<ICommandHandler<UpdateVehicleCommand>, UpdateVehicleCommandHandler>();
+            builder.Services.AddTransient<IQueryHandler<GetVehicleByIdQuery, Vehicle?>, GetVehicleByIdQueryHandler>();
+            builder.Services.AddTransient<IQueryHandler<GetAllVehiclesQuery, IReadOnlyCollection<Vehicle>>, GetAllVehiclesQueryHandler>();
+
+            //builder.Services.AddMediatR(configuration =>
+            //{
+            //    configuration.RegisterServicesFromAssembly(typeof(Program).Assembly);
+            //});
 
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

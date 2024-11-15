@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ParkingManager.DataAccess")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f98cd097e83685d310d09d917829c83ed801c56b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b2fac20729ebb8270d2cd9a20b54ad1331e7286a")]
 [assembly: System.Reflection.AssemblyProductAttribute("ParkingManager.DataAccess")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ParkingManager.DataAccess")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using ParkingManager.BusinessLogic.Contracts;
-using ParkingManager.BusinessLogic.Services;
-using ParkingManager.DataAccess.Entities;
+using ParkingManager.Domain.Contracts;
+using ParkingManager.Domain.Entities;
 
 namespace ParkingManagerAPI.Controllers
 {
