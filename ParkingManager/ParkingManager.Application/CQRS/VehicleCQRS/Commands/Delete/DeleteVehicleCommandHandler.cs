@@ -1,5 +1,6 @@
 ﻿using ParkingManager.Application.CQRS.Core;
-using ParkingManager.Infrastructure.Repositories.VehicleRepo;
+using ParkingManager.Domain.Contracts;
+
 
 namespace ParkingManager.Application.CQRS.VehicleCQRS.Commands.Delete
 {

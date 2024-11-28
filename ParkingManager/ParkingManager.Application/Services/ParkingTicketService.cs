@@ -1,9 +1,7 @@
 ﻿
 using ParkingManager.Domain.Contracts;
 using ParkingManager.Domain.Entities;
-using ParkingManager.Infrastructure.Repositories.ParkingSpaceRepo;
-using ParkingManager.Infrastructure.Repositories.ParkingTicketRepo;
-using ParkingManager.Infrastructure.Repositories.VehicleRepo;
+
 
 namespace ParkingManager.Application.Services
 {

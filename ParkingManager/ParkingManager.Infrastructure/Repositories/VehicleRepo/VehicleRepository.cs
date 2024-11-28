@@ -1,7 +1,8 @@
-﻿
-using Microsoft.EntityFrameworkCore;
+﻿using ParkingManager.Domain.Contracts;
 using ParkingManager.Infrastructure.Data;
+using ParkingManager.Applic.DTO;
 using ParkingManager.Domain.Entities;
+using Microsoft.EntityFrameworkCore;
 using System.Collections.ObjectModel;
 
 namespace ParkingManager.Infrastructure.Repositories.VehicleRepo
@@ -15,8 +16,9 @@ namespace ParkingManager.Infrastructure.Repositories.VehicleRepo
             _context = context;
         }
 
-        public async Task Create(Vehicle entity)
+        public async Task Create(VehicleDTO dto)
         {
+            var entity = VehicleMapper.ToEntity(dto);
             await _context.Vehicles.AddAsync(entity);
             await _context.SaveChangesAsync();
         }
@@ -31,37 +33,38 @@ namespace ParkingManager.Infrastructure.Repositories.VehicleRepo
             }
         }
 
-        public async Task<ReadOnlyCollection<Vehicle>> Get()
+        public async Task<ReadOnlyCollection<VehicleDTO>> Get()
         {
             var vehicles = await _context.Vehicles.ToListAsync();
-            return vehicles.AsReadOnly();
+            var vehicleDTOs = vehicles.Select(VehicleMapper.ToDTO).ToList();
+            return vehicleDTOs.AsReadOnly();
         }
 
-        public async Task<Vehicle?> Get(int id)
+        public async Task<VehicleDTO?> Get(int id)
         {
-            return await _context.Vehicles.FirstOrDefaultAsync(e => e.Id == id);
+            var entity = await _context.Vehicles.FirstOrDefaultAsync(e => e.Id == id);
+            return entity != null ? VehicleMapper.ToDTO(entity) : null;
         }
 
-        public async Task<ReadOnlyCollection<Vehicle>> Get(Func<Vehicle, bool> predicate)
+        public async Task<ReadOnlyCollection<VehicleDTO>> Get(Func<Vehicle, bool> predicate)
         {
             var vehicles = _context.Vehicles.Where(predicate).ToList();
-            return await Task.FromResult(vehicles.AsReadOnly());
+            var vehicleDTOs = vehicles.Select(VehicleMapper.ToDTO).ToList();
+            return await Task.FromResult(vehicleDTOs.AsReadOnly());
         }
 
-        public async Task Update(Vehicle entity)
+        public async Task Update(VehicleDTO dto)
         {
-            var existingEntity = await _context.Vehicles.FirstOrDefaultAsync(e => e.Id == entity.Id);
-            if (existingEntity != null)
+            var entity = await _context.Vehicles.FirstOrDefaultAsync(e => e.Id == dto.Id);
+            if (entity != null)
             {
-                existingEntity.LicencePlate = entity.LicencePlate;
-                existingEntity.Mark = entity.Mark;
-                existingEntity.Model = entity.Model;
-                existingEntity.Color = entity.Color;
+                entity.LicencePlate = dto.LicencePlate;
+                entity.Mark = dto.Mark;
+                entity.Model = dto.Model;
+                entity.Color = dto.Color;
 
                 await _context.SaveChangesAsync();
             }
         }
     }
-
-
 }

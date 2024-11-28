@@ -1495,6 +1495,30 @@
             "rid": "win"
           }
         }
+      },
+      "ParkingManager.DataAccess/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "8.0.10",
+          "Microsoft.EntityFrameworkCore.SqlServer": "8.0.10"
+        },
+        "compile": {
+          "bin/placeholder/ParkingManager.DataAccess.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ParkingManager.DataAccess.dll": {}
+        }
+      },
+      "TaxCalculationSdk/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/TaxCalculationSdk.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TaxCalculationSdk.dll": {}
+        }
       }
     }
   },
@@ -4030,13 +4054,25 @@
         "system.windows.extensions.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "ParkingManager.DataAccess/1.0.0": {
+      "type": "project",
+      "path": "../ParkingManager.DataAccess/ParkingManager.DataAccess.csproj",
+      "msbuildProject": "../ParkingManager.DataAccess/ParkingManager.DataAccess.csproj"
+    },
+    "TaxCalculationSdk/1.0.0": {
+      "type": "project",
+      "path": "../TaxCalculationSdk/TaxCalculationSdk.csproj",
+      "msbuildProject": "../TaxCalculationSdk/TaxCalculationSdk.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
       "Microsoft.EntityFrameworkCore >= 8.0.10",
       "Microsoft.EntityFrameworkCore.SqlServer >= 8.0.10",
-      "Microsoft.EntityFrameworkCore.Tools >= 8.0.10"
+      "Microsoft.EntityFrameworkCore.Tools >= 8.0.10",
+      "ParkingManager.DataAccess >= 1.0.0",
+      "TaxCalculationSdk >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -4066,7 +4102,14 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\ruslan\\Source\\repos\\Parking_manager\\ParkingManager\\ParkingManager.DataAccess\\ParkingManager.DataAccess.csproj": {
+              "projectPath": "C:\\Users\\ruslan\\Source\\repos\\Parking_manager\\ParkingManager\\ParkingManager.DataAccess\\ParkingManager.DataAccess.csproj"
+            },
+            "C:\\Users\\ruslan\\Source\\repos\\Parking_manager\\ParkingManager\\TaxCalculationSdk\\TaxCalculationSdk.csproj": {
+              "projectPath": "C:\\Users\\ruslan\\Source\\repos\\Parking_manager\\ParkingManager\\TaxCalculationSdk\\TaxCalculationSdk.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

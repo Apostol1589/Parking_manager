@@ -1,6 +1,7 @@
 ﻿using ParkingManager.Application.CQRS.Core;
+using ParkingManager.Domain.Contracts;
 using ParkingManager.Domain.Entities;
-using ParkingManager.Infrastructure.Repositories.VehicleRepo;
+
 
 namespace ParkingManager.Application.CQRS.VehicleCQRS.Commands.Create
 {

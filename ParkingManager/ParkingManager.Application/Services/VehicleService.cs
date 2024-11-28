@@ -1,7 +1,5 @@
 ﻿using ParkingManager.Domain.Contracts;
 using ParkingManager.Domain.Entities;
-using ParkingManager.Infrastructure.Repositories.VehicleRepo;
-
 
 namespace ParkingManager.Application.Services
 {

@@ -1,6 +1,6 @@
 ﻿using ParkingManager.Domain.Entities;
 
-namespace ParkingManager.Domain.Contracts
+namespace ParkingManager.Application.Contracts
 {
     public interface IParkingTicketService
     {

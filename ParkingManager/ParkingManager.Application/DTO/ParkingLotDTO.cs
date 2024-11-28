@@ -1,9 +1,9 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
 
-namespace ParkingManager.Domain.Entities
+namespace ParkingManager.Application.DTO
 {
-    public class ParkingLot : BaseEntity
+    public class ParkingLotDTO
     {
 
         [Required]
@@ -11,5 +11,7 @@ namespace ParkingManager.Domain.Entities
 
         [Required]
         public string Location { get; set; }
+
+
     }
 }

@@ -1,6 +1,6 @@
 ﻿using ParkingManager.Application.CQRS.Core;
-using ParkingManager.Infrastructure.Data;
-using ParkingManager.Infrastructure.Repositories.ParkingLotRepo;
+using ParkingManager.Domain.Contracts;
+
 
 namespace ParkingManager.Application.CQRS.ParkingLotCQRS.Commands.Update
 {

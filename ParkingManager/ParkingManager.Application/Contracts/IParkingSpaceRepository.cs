@@ -2,7 +2,7 @@
 using ParkingManager.Domain.Entities;
 using System.Collections.ObjectModel;
 
-namespace ParkingManager.Infrastructure.Repositories.ParkingSpaceRepo
+namespace ParkingManager.Application.Contracts
 {
     public interface IParkingSpaceRepository : IRepository<ParkingSpace>
     {

@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using ParkingManager.Infrastructure.Data;
 using ParkingManager.Domain.Entities;
 using System.Collections.ObjectModel;
+using ParkingManager.Domain.Contracts;
 
 namespace ParkingManager.Infrastructure.Repositories.ParkingSpaceRepo
 {

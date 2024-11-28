@@ -1,6 +1,6 @@
 ﻿using ParkingManager.Domain.Entities;
 using System.Collections.ObjectModel;
-namespace ParkingManager.Infrastructure.Repositories
+namespace ParkingManager.Application.Contracts
 {
     public interface IRepository { }
 

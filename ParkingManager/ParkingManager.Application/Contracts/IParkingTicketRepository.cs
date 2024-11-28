@@ -1,7 +1,7 @@
 ﻿using ParkingManager.Domain.Entities;
 using System.Collections.ObjectModel;
 
-namespace ParkingManager.Infrastructure.Repositories.ParkingTicketRepo
+namespace ParkingManager.Application.Contracts
 {
     public interface IParkingTicketRepository : IRepository<ParkingTicket>
     {

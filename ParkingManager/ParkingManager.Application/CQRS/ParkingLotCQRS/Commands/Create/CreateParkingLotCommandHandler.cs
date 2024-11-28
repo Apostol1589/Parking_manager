@@ -1,7 +1,6 @@
 ﻿using ParkingManager.Application.CQRS.Core;
+using ParkingManager.Domain.Contracts;
 using ParkingManager.Domain.Entities;
-using ParkingManager.Infrastructure.Data;
-using ParkingManager.Infrastructure.Repositories.ParkingLotRepo;
 namespace ParkingManager.Application.CQRS.ParkingLotCQRS.Commands.Create
 {
     public class CreateParkingLotCommandHandler : ICommandHandler<CreateParkingLotCommand, int>

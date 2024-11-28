@@ -1,5 +1,5 @@
 ﻿using ParkingManager.Domain.Entities;
-namespace ParkingManager.Domain.Contracts
+namespace ParkingManager.DomApplicationain.Contracts
 {
     public interface IParkingSpaceService
     {
